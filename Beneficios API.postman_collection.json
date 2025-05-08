@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "598f54f8-a30f-49d1-ab47-26189229d8be",
+		"name": "Beneficios API",
+		"description": "API for retrieving aggregated beneficios\n\nContact Support:\n Email: contact@myapi.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10199276"
+	},
+	"item": [
+		{
+			"name": "beneficios-procesados",
+			"item": [
+				{
+					"name": "Get aggregated beneficios grouped by year",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/beneficios-procesados",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"beneficios-procesados"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/beneficios-procesados",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"beneficios-procesados"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"year\": \"<string>\",\n    \"num\": \"<integer>\",\n    \"beneficios-procesados\": [\n      {\n        \"id_programa\": \"<integer>\",\n        \"monto\": \"<number>\",\n        \"fecha_recepcion\": \"<date>\",\n        \"fecha\": \"<date>\",\n        \"ano\": \"<string>\",\n        \"view\": \"<boolean>\",\n        \"ficha\": {}\n      },\n      {\n        \"id_programa\": \"<integer>\",\n        \"monto\": \"<number>\",\n        \"fecha_recepcion\": \"<date>\",\n        \"fecha\": \"<date>\",\n        \"ano\": \"<string>\",\n        \"view\": \"<boolean>\",\n        \"ficha\": {}\n      }\n    ]\n  },\n  {\n    \"year\": \"<string>\",\n    \"num\": \"<integer>\",\n    \"beneficios-procesados\": [\n      {\n        \"id_programa\": \"<integer>\",\n        \"monto\": \"<number>\",\n        \"fecha_recepcion\": \"<date>\",\n        \"fecha\": \"<date>\",\n        \"ano\": \"<string>\",\n        \"view\": \"<boolean>\",\n        \"ficha\": {}\n      },\n      {\n        \"id_programa\": \"<integer>\",\n        \"monto\": \"<number>\",\n        \"fecha_recepcion\": \"<date>\",\n        \"fecha\": \"<date>\",\n        \"ano\": \"<string>\",\n        \"view\": \"<boolean>\",\n        \"ficha\": {}\n      }\n    ]\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get beneficios",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
