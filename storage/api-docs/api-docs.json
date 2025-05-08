@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Beneficios API",
+        "description": "API for retrieving aggregated beneficios",
+        "contact": {
+            "email": "contact@myapi.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/beneficios-procesados": {
+            "get": {
+                "tags": [
+                    "Beneficios"
+                ],
+                "summary": "Get aggregated beneficios grouped by year",
+                "operationId": "dda4e061a26350b9b96f1e35bcc35771",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "year": {
+                                                "type": "string"
+                                            },
+                                            "num": {
+                                                "type": "integer"
+                                            },
+                                            "beneficios-procesados": {
+                                                "type": "array",
+                                                "items": {
+                                                    "properties": {
+                                                        "id_programa": {
+                                                            "type": "integer"
+                                                        },
+                                                        "monto": {
+                                                            "type": "number"
+                                                        },
+                                                        "fecha_recepcion": {
+                                                            "type": "string",
+                                                            "format": "date"
+                                                        },
+                                                        "fecha": {
+                                                            "type": "string",
+                                                            "format": "date"
+                                                        },
+                                                        "ano": {
+                                                            "type": "string"
+                                                        },
+                                                        "view": {
+                                                            "type": "boolean"
+                                                        },
+                                                        "ficha": {
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Beneficios",
+            "description": "Beneficios"
+        }
+    ]
+}
